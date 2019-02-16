@@ -1,0 +1,24 @@
+{
+  "name": "reader",
+  "version": "0.0.1",
+  "description": "all your feeds at one place",
+  "main": "index.js",
+  "repository": "https://github.com/alivenotions/reader",
+  "author": "Bhavdeep Dhanjal <dhanjalbhavdeep@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "1.11.0",
+    "typescript": "3.3.3"
+  },
+  "dependencies": {
+    "@types/react": "16.8.3",
+    "@types/react-dom": "16.8.1",
+    "react": "16.8.2",
+    "react-dom": "16.8.2"
+  }
+}
