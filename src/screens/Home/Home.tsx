@@ -1,16 +1,12 @@
 import React from 'react'
-import Header from './Header'
-import styled from '@emotion/styled'
 
-const Layout = styled.div`
-  margin: 2% 5%;
-`
+import Header from './Header'
 
 const Home = () => {
   return (
-    <Layout>
+    <div>
       <Header title={'Reader'} />
-    </Layout>
+    </div>
   )
 }
 
