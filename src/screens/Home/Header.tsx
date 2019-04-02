@@ -5,7 +5,11 @@ interface Props {
 }
 
 const Header = ({ title }: Props) => {
-  return <h1>{title} </h1>
+  return (
+    <span className="text-teal-dark pl-1 pr-2 text-5xl border-teal-darkest border-solid border-4 tracking-tight font-display font-bold">
+      {title}
+    </span>
+  )
 }
 
 export default Header
