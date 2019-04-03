@@ -5,7 +5,7 @@ import Header from './Header'
 const Home = () => {
   return (
     <div>
-      <Header title={'reader.'} />
+      <Header />
     </div>
   )
 }

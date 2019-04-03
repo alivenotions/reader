@@ -1,14 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-interface Props {
-  title: string
-}
+import Logo from '../../shared/components/Logo'
+import NewRSSFeedIcon from '../../shared/components/NewRSSFeedIcon'
+import SettingsIcon from '../../shared/components/SettingsIcon'
 
-const Header = ({ title }: Props) => {
+const Header = () => {
   return (
-    <span className="text-teal-dark pl-1 pr-2 text-5xl border-teal-darkest border-solid border-4 tracking-tight font-display font-bold">
-      {title}
-    </span>
+    <div className="flex justify-between">
+      <Logo />
+      <span className="flex items-center justify-center mr-10">
+        <button className="text-teal-darker hover:text-teal-dark mr-6">
+          <NewRSSFeedIcon height="40px" width="40px" className="fill-current" />
+        </button>
+        <Link to="/settings" className="text-teal-darker hover:text-teal-dark">
+          <SettingsIcon height="40px" width="40px" className="fill-current" />
+        </Link>
+      </span>
+    </div>
   )
 }
 

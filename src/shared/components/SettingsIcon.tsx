@@ -1,8 +1,17 @@
-function SettingsIcon() {
+import React from 'react'
+
+interface Props {
+  width: string
+  height: string
+  className: string
+}
+
+function SettingsIcon({ width, height, className }: Props) {
   return (
     <svg
-      width="100px"
-      height="100px"
+      width={width}
+      height={height}
+      className={className}
       viewBox="0 0 192 192"
       xmlns="http://www.w3.org/2000/svg"
     >
