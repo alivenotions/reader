@@ -4,9 +4,9 @@ import Header from './Header'
 
 const Home = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
-    </div>
+    </React.Fragment>
   )
 }
 
