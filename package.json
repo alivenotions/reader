@@ -8,8 +8,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "yarn watch:css & parcel ./src/index.html",
-    "build": "yarn build:css && parcel build ./src/index.html",
+    "start": "yarn watch:css & yarn dev",
+    "build": "yarn build:css && yarn build:ts",
+    "build:ts": "parcel build ./src/index.html",
+    "dev": "parcel ./src/index.html",
     "build:css": "postcss src/styles/index.css -o src/index.css",
     "watch:css": "postcss src/styles/index.css -o src/index.css -w",
     "lint": "eslint src/**/*.ts*",
