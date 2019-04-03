@@ -10,10 +10,17 @@ const Header = () => {
     <div className="flex justify-between">
       <Logo />
       <span className="flex items-center justify-center mr-10">
-        <button className="text-teal-darker hover:text-teal-dark mr-6">
+        <button
+          title="Add New Feed"
+          className="text-teal-darker hover:text-teal-dark mr-6"
+        >
           <NewRSSFeedIcon height="40px" width="40px" className="fill-current" />
         </button>
-        <Link to="/settings" className="text-teal-darker hover:text-teal-dark">
+        <Link
+          to="/settings"
+          title="Settings"
+          className="text-teal-darker hover:text-teal-dark"
+        >
           <SettingsIcon height="40px" width="40px" className="fill-current" />
         </Link>
       </span>
