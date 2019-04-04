@@ -1,17 +1,13 @@
 import React from 'react'
 
 interface Props {
-  height: string
-  width: string
   className: string
 }
 
-function NewRSSFeedIcon({ height, width, className }: Props) {
+function NewRSSFeedIcon({ className }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
       className={className}
       viewBox="0 0 24 24"
     >
