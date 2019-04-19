@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react'
 import Switch from 'react-switch'
 
+import ColorButton from '../../shared/components/ColorButton'
+
 const responsiveMarginClasses = ` \
 mt-16 \
 xl:mr-24 xl:ml-24 \
@@ -65,6 +67,15 @@ function Settings() {
             ariaLabelledby="Show notifications"
             {...switchStyle}
           />
+        }
+      />
+      <SettingRow
+        title="Theme"
+        component={
+          <React.Fragment>
+            <ColorButton color="teal" shape="round" selected={true} />
+            <ColorButton color="red" shape="round" />
+          </React.Fragment>
         }
       />
     </div>
