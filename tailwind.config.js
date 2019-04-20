@@ -43,6 +43,12 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 |
 */
 
+// The main colors are being maintained in the
+// src/shared/constants/colors.ts file too. That
+// object is used wherever raw hex code is required
+// and classnames can't be directly applied. So any
+// changes to the palette here needs to be reflected
+// in that file too.
 let colors = {
   'transparent': 'transparent',
 
@@ -350,7 +356,7 @@ module.exports = {
 
   /*
   |-----------------------------------------------------------------------------
-  | Text colors                         https://tailwindcss.com/docs/text-color
+  | Text c000olors                         https://tailwindcss.com/docs/text-color
   |-----------------------------------------------------------------------------
   |
   | Here is where you define your text colors. By default these use the
@@ -789,6 +795,7 @@ module.exports = {
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'outline': '0 0 0 3px rgba(52,144,220,0.5)',
     'none': 'none',
+    'select': '0 0 1px 4px #22292f',
   },
 
 

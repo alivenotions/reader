@@ -9,10 +9,12 @@ interface Props {
 function ColorButton({ color, shape, selected = false }: Props) {
   // classes for styling with tailwind
   const buttonShape = shape === 'square' ? 'rounded' : 'rounded-full'
-  const border = selected ? 'border-black border-2' : 'border-white border-2'
+  const border = selected ? 'shadow-select' : ''
 
   return (
-    <button className={`bg-${color} w-8 h-8 ${buttonShape} ml-1 ${border}`} />
+    <button
+      className={`bg-${color} hover:bg-${color}-light w-6 h-6 ${buttonShape} ml-2 ${border}`}
+    />
   )
 }
 

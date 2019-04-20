@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react'
 import Switch from 'react-switch'
 
 import ColorButton from '../../shared/components/ColorButton'
+import PALETTE from '../../shared/constants/colors'
 
 const responsiveMarginClasses = ` \
 mt-16 \
@@ -27,6 +28,7 @@ const switchStyle = {
   handleDiameter: 18,
   uncheckedIcon: false,
   checkedIcon: false,
+  onColor: PALETTE.teal,
 }
 
 function Settings() {
