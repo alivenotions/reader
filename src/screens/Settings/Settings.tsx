@@ -32,23 +32,11 @@ const switchStyle = {
 }
 
 function Settings() {
-  const [darkMode, setDarkMode] = React.useState(false)
   const [openInNewTab, setOpenInNewTab] = React.useState(false)
   const [showNotifications, setShowNotifications] = React.useState(true)
 
   return (
     <div className={`${fontClasses} ${responsiveMarginClasses}`}>
-      <SettingRow
-        title="Dark Mode"
-        component={
-          <Switch
-            onChange={checked => setDarkMode(checked)}
-            checked={darkMode}
-            ariaLabelledby="Dark Mode"
-            {...switchStyle}
-          />
-        }
-      />
       <SettingRow
         title="Open posts in new tab"
         component={

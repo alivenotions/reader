@@ -20,3 +20,21 @@ export default {
   purple: '#9561e2',
   pink: '#f66d9b',
 }
+
+export type ColorPalette =
+  | 'black'
+  | 'grey'
+  | 'white'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'teal'
+  | 'blue'
+  | 'indigo'
+  | 'purple'
+  | 'pink'
+
+export const ThemeColors = {
+  light: ['red', 'orange', 'yellow', 'green', 'teal', 'blue', 'purple', 'pink'],
+}
