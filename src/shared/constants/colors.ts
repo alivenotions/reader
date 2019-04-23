@@ -35,6 +35,6 @@ export type ColorPalette =
   | 'purple'
   | 'pink'
 
-export const ThemeColors = {
+export const ThemeColors: { light: ColorPalette[] } = {
   light: ['red', 'orange', 'green', 'teal', 'blue', 'purple', 'pink'],
 }

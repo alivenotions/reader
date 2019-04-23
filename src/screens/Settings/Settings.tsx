@@ -1,9 +1,12 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useContext } from 'react'
 import Switch from 'react-switch'
 
 import ColorButton from '../../shared/components/ColorButton'
-import HEX_PALETTE, { ThemeColors } from '../../shared/constants/colors'
-import { SettingsContext } from '../../shared/context'
+import HEX_PALETTE, {
+  ThemeColors,
+  ColorPalette,
+} from '../../shared/constants/colors'
+import { SettingsContext, SettingsDispatch } from '../../shared/context'
 
 const RESPONSIVE_MARGIN_CLASSES = ` \
 mt-16 \
@@ -23,13 +26,13 @@ sm:text-sm \
 text-sm
 `
 
-function Settings() {
-  const [, setOpenInNewTab] = React.useState(false)
-  const [, setShowNotifications] = React.useState(true)
+const COLOR_BUTTON_SHAPE = 'round'
 
-  const { currentTheme, openInNewTab, showNotifications } = React.useContext(
+function Settings() {
+  const { currentTheme, openInNewTab, showNotifications } = useContext(
     SettingsContext
   )
+  const dispatch = useContext(SettingsDispatch)
 
   const switchStyle = {
     height: 26,
@@ -40,13 +43,17 @@ function Settings() {
     onColor: HEX_PALETTE[currentTheme],
   }
 
+  function setTheme(color: ColorPalette) {
+    dispatch({ type: 'changeTheme', theme: color })
+  }
+
   return (
     <div className={`${FONT_CLASSES} ${RESPONSIVE_MARGIN_CLASSES}`}>
       <SettingRow
         title="Open posts in new tab"
         component={
           <Switch
-            onChange={checked => setOpenInNewTab(checked)}
+            onChange={() => dispatch({ type: 'toggleOpenInNewTab' })}
             checked={openInNewTab}
             ariaLabelledby="Open posts in new tab"
             {...switchStyle}
@@ -57,7 +64,7 @@ function Settings() {
         title="Show notifications"
         component={
           <Switch
-            onChange={checked => setShowNotifications(checked)}
+            onChange={() => dispatch({ type: 'toggleShowNotifications' })}
             checked={showNotifications}
             ariaLabelledby="Show notifications"
             {...switchStyle}
@@ -74,8 +81,9 @@ function Settings() {
                 <ColorButton
                   key={color}
                   color={color}
-                  shape="round"
+                  shape={COLOR_BUTTON_SHAPE}
                   isSelected={isSelected}
+                  setTheme={setTheme}
                 />
               )
             })}
