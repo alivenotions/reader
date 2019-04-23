@@ -3,13 +3,13 @@ import React from 'react'
 interface Props {
   color: string
   shape: 'round' | 'square'
-  selected?: boolean
+  isSelected?: boolean
 }
 
-function ColorButton({ color, shape, selected = false }: Props) {
+function ColorButton({ color, shape, isSelected = false }: Props) {
   // classes for styling with tailwind
   const buttonShape = shape === 'square' ? 'rounded' : 'rounded-full'
-  const border = selected ? 'shadow-select' : ''
+  const border = isSelected ? 'shadow-select' : ''
 
   return (
     <button

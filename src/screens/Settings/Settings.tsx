@@ -2,9 +2,10 @@ import React, { ReactElement } from 'react'
 import Switch from 'react-switch'
 
 import ColorButton from '../../shared/components/ColorButton'
-import PALETTE from '../../shared/constants/colors'
+import HEX_PALETTE, { ThemeColors } from '../../shared/constants/colors'
+import { SettingsContext } from '../../shared/context'
 
-const responsiveMarginClasses = ` \
+const RESPONSIVE_MARGIN_CLASSES = ` \
 mt-16 \
 xl:mr-24 xl:ml-24 \
 lg:mr-20 lg:ml-20 \
@@ -13,7 +14,7 @@ sm:mr-12 sm:ml-12 \
 mr-12 ml-12
 `
 
-const fontClasses = ` \
+const FONT_CLASSES = ` \
 font-display \
 xl:text-xl \
 lg:text-lg \
@@ -22,21 +23,25 @@ sm:text-sm \
 text-sm
 `
 
-const switchStyle = {
-  height: 26,
-  width: 48,
-  handleDiameter: 18,
-  uncheckedIcon: false,
-  checkedIcon: false,
-  onColor: PALETTE.teal,
-}
-
 function Settings() {
-  const [openInNewTab, setOpenInNewTab] = React.useState(false)
-  const [showNotifications, setShowNotifications] = React.useState(true)
+  const [, setOpenInNewTab] = React.useState(false)
+  const [, setShowNotifications] = React.useState(true)
+
+  const { currentTheme, openInNewTab, showNotifications } = React.useContext(
+    SettingsContext
+  )
+
+  const switchStyle = {
+    height: 26,
+    width: 48,
+    handleDiameter: 18,
+    uncheckedIcon: false,
+    checkedIcon: false,
+    onColor: HEX_PALETTE[currentTheme],
+  }
 
   return (
-    <div className={`${fontClasses} ${responsiveMarginClasses}`}>
+    <div className={`${FONT_CLASSES} ${RESPONSIVE_MARGIN_CLASSES}`}>
       <SettingRow
         title="Open posts in new tab"
         component={
@@ -63,8 +68,17 @@ function Settings() {
         title="Theme"
         component={
           <React.Fragment>
-            <ColorButton color="teal" shape="round" selected={true} />
-            <ColorButton color="red" shape="round" />
+            {ThemeColors.light.map(color => {
+              const isSelected = color === currentTheme
+              return (
+                <ColorButton
+                  key={color}
+                  color={color}
+                  shape="round"
+                  isSelected={isSelected}
+                />
+              )
+            })}
           </React.Fragment>
         }
       />
