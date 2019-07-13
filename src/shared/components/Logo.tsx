@@ -12,11 +12,11 @@ interface Props {
  */
 function Logo({ textSizeClasses, color }: Props) {
   return (
-    <span
-      className={`text-${color}-dark pl-1 pr-2 ${textSizeClasses} border-${color}-darkest border-solid border-4 tracking-tight font-display font-bold`}
+    <h1
+      className={`text-${color}-darker pl-1 pr-2 ${textSizeClasses} border-${color}-darkest border-solid border-4 tracking-tight font-display font-bold`}
     >
       reader.
-    </span>
+    </h1>
   )
 }
 
