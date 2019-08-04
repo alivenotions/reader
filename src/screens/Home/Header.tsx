@@ -18,14 +18,14 @@ const Header = () => {
       <span className="flex items-center justify-center">
         <button
           title="Add New Feed"
-          className={`text-${currentTheme}-darker hover:text-${currentTheme}-dark mr-6`}
+          className={`text-${currentTheme}-700 hover:text-${currentTheme} mr-6`}
         >
           <NewRSSFeedIcon className="fill-current w-8 xl:w-10 lg:w-10 md:w-8 sm:w-8" />
         </button>
         <Link
           to="/settings"
           title="Settings"
-          className={`text-${currentTheme}-darker hover:text-${currentTheme}-dark`}
+          className={`text-${currentTheme}-700 hover:text-${currentTheme}`}
         >
           <SettingsIcon className="fill-current w-8 xl:w-10 lg:w-10 md:w-8 sm:w-8" />
         </Link>

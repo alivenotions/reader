@@ -13,7 +13,7 @@ interface Props {
 function Logo({ textSizeClasses, color }: Props) {
   return (
     <h1
-      className={`text-${color}-darker pl-1 pr-2 ${textSizeClasses} border-${color}-darkest border-solid border-4 tracking-tight font-display font-bold`}
+      className={`text-${color}-700 pl-1 pr-2 ${textSizeClasses} border-${color}-900 border-solid border-4 tracking-tight leading-tight font-display font-bold`}
     >
       reader.
     </h1>

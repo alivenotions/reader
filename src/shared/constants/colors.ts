@@ -7,18 +7,18 @@
  * should be reflected here too.
  */
 export default {
-  black: '#22292f',
-  grey: '#b8c2cc',
+  black: '#000000',
+  grey: '#A0AEC0',
   white: '#ffffff',
-  red: '#e3342f',
-  orange: '#f6993f',
-  yellow: '#ffed4a',
-  green: '#38c172',
-  teal: '#4dc0b5',
-  blue: '#3490dc',
-  indigo: '#6574cd',
-  purple: '#9561e2',
-  pink: '#f66d9b',
+  red: '#F56565',
+  orange: '#ED8936',
+  yellow: '#ECC94B',
+  green: '#48BB78',
+  teal: '#38B2AC',
+  blue: '#4299E1',
+  indigo: '#667EEA',
+  purple: '#9F7AEA',
+  pink: '#ED64A6',
 }
 
 export type ColorPalette =
