@@ -4812,6 +4812,13 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+"lighthousebot@https://github.com/GoogleChromeLabs/lighthousebot":
+  version "0.2.0"
+  resolved "https://github.com/GoogleChromeLabs/lighthousebot#350d70440116928c6dd25c4daa83ca3dcc1c3dfc"
+  dependencies:
+    minimist "^1.2.0"
+    node-fetch "^2.2.0"
+
 lint-staged@8.1.5:
   version "8.1.5"
   resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-8.1.5.tgz#372476fe1a58b8834eb562ed4c99126bd60bdd79"
@@ -5284,6 +5291,11 @@ node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@^2.2.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-forge@^0.7.1:
   version "0.7.6"
