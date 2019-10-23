@@ -8,6 +8,7 @@ A basic RSS reader for aggregating RSS feeds.
 2. Run `yarn install`
 3. For dev server, run `yarn start`
 4. For production build, run `yarn build`
+5. Tests can be run with `yarn test`
 
 ## Dependencies
 
@@ -27,3 +28,8 @@ These are the major dependencies in the project with the reasons for why they we
   * Sort of like inline styles but optimized and centralized.
   * Can work with media queries on the same level with ease.
   * Experimenting with this library for the first time.
+* [Parcel](https://github.com/parcel-bundler/parcel)
+  * A lightweight, and fast application bundler
+  * Way less overhead than webpack
+  * Naturally more opinionated and less configurable (wanted to try this way out)
+  * Errors are really helpful
