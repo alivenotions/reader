@@ -18,6 +18,7 @@ const Header = () => {
       <span className="flex items-center justify-center">
         <button
           title="Add New Feed"
+          aria-label="Add new feed"
           className={`text-${currentTheme}-700 hover:text-${currentTheme}-500 mr-6`}
         >
           <NewRSSFeedIcon className="fill-current w-8 xl:w-10 lg:w-10 md:w-8 sm:w-8" />
@@ -25,6 +26,7 @@ const Header = () => {
         <Link
           to="/settings"
           title="Settings"
+          aria-label="Go to settings"
           className={`text-${currentTheme}-700 hover:text-${currentTheme}-500`}
         >
           <SettingsIcon className="fill-current w-8 xl:w-10 lg:w-10 md:w-8 sm:w-8" />

@@ -55,7 +55,7 @@ function Settings() {
           <Switch
             onChange={() => dispatch({ type: 'toggleOpenInNewTab' })}
             checked={openInNewTab}
-            ariaLabelledby="Open posts in new tab"
+            aria-label="Open posts in new tab"
             {...switchStyle}
           />
         }
@@ -66,7 +66,7 @@ function Settings() {
           <Switch
             onChange={() => dispatch({ type: 'toggleShowNotifications' })}
             checked={showNotifications}
-            ariaLabelledby="Show notifications"
+            aria-label="Show notifications"
             {...switchStyle}
           />
         }
@@ -94,6 +94,7 @@ function Settings() {
   )
 }
 
+// TODO: Convert this to take these props as children
 function SettingRow({
   title,
   component,
